@@ -114,14 +114,6 @@ for eventId, event in activeEvents do
     end
 end
 
--- lootbags listener 
-Library.Things:FindFirstChild("Lootbags").ChildAdded:Connect(function(lootbag)
-    task.wait()
-    if lootbag then
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbags_Claim"):FireServer(unpack({ [1] = { [1] = lootbag.Name, }, }))
-    end
-end) -- simple method too collect lotbags 
-
 function CollectAllLootbags()
     pcall(function()
         for _, lootbag in pairs(Library.Things:FindFirstChild("Lootbags"):GetChildren()) do
