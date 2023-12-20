@@ -4,7 +4,7 @@ getgenv().config = {
         eventName = "Gingerbread", -- prob to change it to Comet or Coin Jar
         servers = {
             count = 100, -- 10, 25, 50, 100
-            sort = "Desc", -- Desc, Asc
+            sort = "Asc", -- Desc, Asc
             pageDeep = math.random(2, 6), -- selected players page
         },
         delays = {
